@@ -14,13 +14,21 @@
   </div>
 </div>
 <div class="well">
-  <div class="all-posts">
-    <h3>All Posts (below)</h3>
-    <ul>
-      {{post-tile}}
-    </ul>
-  </div>
-  <div class="new-post">
-    {{new-post}}
+  <div class="row">
+    <div class="col-md-6">
+      <div class="all-posts">
+        <h3>All Posts (below)</h3>
+        <ul>
+          {{#each model.posts as |post|}}
+            {{post-tile post=post}}
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="new-post">
+        {{new-post savePost="savePost"}}
+      </div>
+    </div>
   </div>
 </div>

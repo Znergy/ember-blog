@@ -1,3 +1,5 @@
-<li>This will contain details about the post</li>
-<li>This will contain details about the post</li>
-<li>This will contain details about the post</li>
+<li>
+  <!-- link to the specific postid (the id is handled by db) -->
+  {{#link-to 'post' post.id}} {{post.title}}, written by {{post.name}} {{/link-to}}
+  <!-- {{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city}} {{/link-to}} -->
+</li>

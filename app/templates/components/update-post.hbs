@@ -1,5 +1,5 @@
-{{#if isFormShowing}}
-<form id="newPostForm" action="index.html" method="post">
+{{#if isShowingForm}}
+<form id="updatePost" action="index.html" method="post">
   <label for="name">Name</label>
   {{input value=name id=nameInput}}
   <label for="title">Title</label>
@@ -8,8 +8,8 @@
   {{input value=topic id=topicInput}}
   <label for="desc">Description</label>
   {{input value=desc id=descInput}}
-  <button {{action 'savePost'}}>Save Post</button>
+  <button {{action 'updatePost' post}}>Save Post</button>
 </form>
 {{else}}
-  <button {{action 'showForm'}}>Add Post</button>
+  <button {{action 'showForm'}}>Update Post</button>
 {{/if}}

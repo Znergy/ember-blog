@@ -1,0 +1,11 @@
+<div class="well">
+  <div class="post-info">
+    <h2>Title: {{model.title}}</h2>
+    <h4>Topic: {{model.topic}}</h4>
+    <p>{{model.desc}}</p>
+    <h3>Written by: {{model.name}}</h3>
+  </div>
+  <div class="update-post">
+    {{update-post post=model updatePost="updatePost"}}
+  </div>
+</div>
